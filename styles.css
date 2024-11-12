@@ -1,0 +1,140 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333333;
+    overflow: hidden; /* Initially hides overflow */
+    font-size: 16px; /* Increased font size by 1.5px */
+}
+
+/* Logo container centered on the page */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 1s ease, opacity 2s ease; /* Smooth transition for blending effect */
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: opacity 2s ease, transform 2s ease; /* Smooth transition for blending effect */
+}
+
+/* Header with logo at the top */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease;
+    z-index: 5;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.header-logo h1 {
+    font-size: 1.8rem;
+    color: #333333;
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+.top-logo {
+    width: 50px;
+    height: auto;
+}
+
+.content {
+    opacity: 0;
+    transition: opacity 1s ease;
+    display: none;
+    padding: 40px 20px;
+}
+
+/* USP Section */
+#usp {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#usp h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+#usp p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+}
+
+h1, h2 {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* QR Code Styling */
+.qr-code {
+    width: 120px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Rounded corners for all sections */
+section, .header-logo {
+    border-radius: 12px;
+}
+
+/* Reveal animations */
+.content.revealed, .header.revealed {
+    display: block;
+    opacity: 1;
+}
+
+/* Apply smooth transition for content reveal */
+.content {
+    transition: opacity 1.5s ease-in-out;
+}
